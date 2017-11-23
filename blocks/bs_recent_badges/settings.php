@@ -30,11 +30,11 @@ if ($ADMIN->fulltree) {
                      'onlysystem' => get_string('onlysystem', 'block_bs_recent_badges'),
                      'courseandsystem' => get_string('courseandsystem', 'block_bs_recent_badges'));
 
-    $settings->add(new admin_setting_configselect('block_bs_recent_badges_allowedmodus',
+    $settings->add(new admin_setting_configselect('block_bs_recent_badges/allowedmodus',
         get_string('modus', 'block_bs_recent_badges'),
         get_string('modusinfo', 'block_bs_recent_badges'), 'courseandsystem', $options));
 
-    $settings->add(new admin_setting_configcheckbox('block_bs_recent_badges_allownames',
+    $settings->add(new admin_setting_configcheckbox('block_bs_recent_badges/allownames',
         get_string('allownamesglobal', 'block_bs_recent_badges'),
         get_string('allownamesinfoglobal', 'block_bs_recent_badges'), 0));
 }

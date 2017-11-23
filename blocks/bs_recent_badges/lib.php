@@ -25,7 +25,7 @@
 
 require_once($CFG->libdir.'/badgeslib.php');
 
-function bs_recent_badges_get_issued_badges($courseid, $number) {
+function block_bs_recent_badges_get_issued_badges($courseid, $number) {
     global $DB;
 
     $params = array();

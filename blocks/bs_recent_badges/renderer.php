@@ -41,7 +41,7 @@ class block_bs_recent_badges_renderer extends plugin_renderer_base {
 
             $useritem = '';
             if ($allownames
-                and $CFG->block_bs_recent_badges_allownames
+                and get_config('block_bs_recent_badges')->allownames
                 and $courseid != SITEID
                 and has_capability('moodle/course:viewparticipants', $context)) {
 

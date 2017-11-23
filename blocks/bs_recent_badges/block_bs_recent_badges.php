@@ -111,8 +111,8 @@ class block_bs_recent_badges extends block_base {
             $courseid = null;
         }
 
-        if ($CFG->block_bs_recent_badges_allowedmodus != 'onlysystem'
-            and $coursebadges = bs_recent_badges_get_issued_badges($courseid, $this->config->numberofcoursebadges)
+        if (get_config('block_bs_recent_badges')->allowedmodus != 'onlysystem'
+            and $coursebadges = block_bs_recent_badges_get_issued_badges($courseid, $this->config->numberofcoursebadges)
             and $COURSE->id != SITEID) {
 
             $output = $this->page->get_renderer('block_bs_recent_badges');
@@ -123,8 +123,8 @@ class block_bs_recent_badges extends block_base {
 
         }
 
-        if ($CFG->block_bs_recent_badges_allowedmodus != 'onlycourse'
-            and $systembadges = bs_recent_badges_get_issued_badges(SITEID, $this->config->numberofsystembadges)) {
+        if (get_config('block_bs_recent_badges')->allowedmodus != 'onlycourse'
+            and $systembadges = block_bs_recent_badges_get_issued_badges(SITEID, $this->config->numberofsystembadges)) {
 
             $output = $this->page->get_renderer('block_bs_recent_badges');
             $this->content->text .= html_writer::tag('div', get_string('latestsystembadges', 'block_bs_recent_badges'),

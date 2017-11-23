@@ -30,7 +30,7 @@ class block_bs_recent_badges_edit_form extends block_edit_form {
 
         $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));
 
-        if ($CFG->block_bs_recent_badges_allowedmodus != 'onlysystem' and $COURSE->id != SITEID) {
+        if (get_config('block_bs_recent_badges')->allowedmodus != 'onlysystem' and $COURSE->id != SITEID) {
 
             $numberofcoursebadges = array();
             for ($i = 0; $i <= 20; $i++) {
@@ -40,14 +40,14 @@ class block_bs_recent_badges_edit_form extends block_edit_form {
                                get_string('numberofcoursebadges', 'block_bs_recent_badges'), $numberofcoursebadges);
             $mform->setDefault('config_numberofcoursebadges', 6);
 
-            if ($CFG->block_bs_recent_badges_allownames) {
+            if (get_config('block_bs_recent_badges')->allownames) {
                 $mform->addElement('advcheckbox', 'config_allownames', get_string('allownames', 'block_bs_recent_badges'),
                                    get_string('allownamesinfo', 'block_bs_recent_badges'), null, array(0, 1));
                 $mform->setDefault('config_allownames', 0);
             }
         }
 
-        if ($CFG->block_bs_recent_badges_allowedmodus != 'onlycourse') {
+        if (get_config('block_bs_recent_badges')->allowedmodus != 'onlycourse') {
 
             $numberofsystembadges = array();
             for ($i = 0; $i <= 20; $i++) {
