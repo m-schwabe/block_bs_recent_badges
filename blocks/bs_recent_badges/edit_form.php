@@ -33,7 +33,7 @@ class block_bs_recent_badges_edit_form extends block_edit_form {
         if (get_config('block_bs_recent_badges')->allowedmodus != 'onlysystem' and $COURSE->id != SITEID) {
 
             $numberofcoursebadges = array();
-            for ($i = 0; $i <= 20; $i++) {
+            for ($i = 0; $i <= 25; $i++) {
                 $numberofcoursebadges[$i] = $i;
             }
             $mform->addElement('select', 'config_numberofcoursebadges',
@@ -50,7 +50,7 @@ class block_bs_recent_badges_edit_form extends block_edit_form {
         if (get_config('block_bs_recent_badges')->allowedmodus != 'onlycourse') {
 
             $numberofsystembadges = array();
-            for ($i = 0; $i <= 20; $i++) {
+            for ($i = 0; $i <= 25; $i++) {
                 $numberofsystembadges[$i] = $i;
             }
             $mform->addElement('select', 'config_numberofsystembadges',
