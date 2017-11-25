@@ -17,14 +17,13 @@
 /**
  * Version details.
  *
- * @package block_bs_recent_badges
- * @author Matthias Schwabe <mail@matthiasschwabe.de>
- * @copyright 2015 Matthias Schwabe
- * @license http://www.gnu.org/copyleft/gpl.html GNU Public License
+ * @package    block_bs_recent_badges
+ * @copyright  2015 onwards Matthias Schwabe {@link http://matthiasschwa.be}
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2017112302;               // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2017112303;               // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2015050500;               // Requires this Moodle version (2.9).
 $plugin->component = 'block_bs_recent_badges'; // Full name of the plugin (used for diagnostics).
