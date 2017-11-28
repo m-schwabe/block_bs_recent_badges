@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Language file.
+ * Language file for recent badges plugin.
  *
  * @package    block_bs_recent_badges
  * @copyright  2015 onwards Matthias Schwabe {@link http://matthiasschwa.be}
@@ -38,7 +38,13 @@ $string['small'] = 'small';
 $string['big'] = 'big';
 $string['user'] = 'User: ';
 $string['iconsize'] = 'Size of badge icons';
-$string['latestcoursebadges'] = 'Recently awarded badges in course:';
+$string['latestcoursebadges'] = 'Recently awarded course badges:';
 $string['latestsystembadges'] = 'Recently awarded site badges:';
 $string['bs_recent_badges:addinstance'] = 'Add a new recent badges block';
 $string['bs_recent_badges:myaddinstance'] = 'Add a new recent badges block to Dashboard';
+$string['configuration'] = 'Configuration';
+$string['about'] = 'About';
+$string['donationtext'] = 'If you like this plugin and want to support my work please feel free to use this Paypal donation button:';
+$string['abouttext'] = 'This plugin has been developed by Matthias Schwabe and is part of a Moodle badges related set of plugins.<br />Other plugins of this set are {$a->badgeenrol}, {$a->badgepool} and {$a->badgeladder}.';
+$string['aboutfeedbacktext'] = 'If you have any feedback or great ideas for new features, do not hesitate to leave a post on the {$a->aboutlink} or send me an e-mail to {$a->aboutmail}.<br /><br />';
+$string['plugindirectory'] = 'Moodle plugin directory page';

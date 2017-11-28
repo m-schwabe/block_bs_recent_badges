@@ -24,8 +24,14 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-if ($ADMIN->fulltree) {
-    $options = array('onlycourse' => get_string('onlycourse', 'block_bs_recent_badges'),
+if ($hassiteconfig) {
+
+	$ADMIN->add('blocksettings', new admin_category('block_bs_recent_badges_folder',
+                get_string('pluginname', 'block_bs_recent_badges')));
+
+	$settings = new admin_settingpage('block_bs_recent_badges', get_string('configuration', 'block_bs_recent_badges'));
+
+	$options = array('onlycourse' => get_string('onlycourse', 'block_bs_recent_badges'),
                      'onlysystem' => get_string('onlysystem', 'block_bs_recent_badges'),
                      'courseandsystem' => get_string('courseandsystem', 'block_bs_recent_badges'));
 
@@ -36,4 +42,12 @@ if ($ADMIN->fulltree) {
     $settings->add(new admin_setting_configcheckbox('block_bs_recent_badges/allownames',
         get_string('allownamesglobal', 'block_bs_recent_badges'),
         get_string('allownamesinfoglobal', 'block_bs_recent_badges'), 0));
+
+	$ADMIN->add('block_bs_recent_badges_folder', $settings);
+
+    $ADMIN->add('block_bs_recent_badges_folder', new admin_externalpage('block_bs_recent_badges_about',
+                get_string('about', 'block_bs_recent_badges'),
+                new moodle_url('/blocks/bs_recent_badges/about.php')));
+
+	$settings = null;
 }

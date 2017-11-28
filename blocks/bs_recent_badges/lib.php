@@ -22,7 +22,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
 require_once($CFG->libdir.'/badgeslib.php');
+require_once($CFG->libdir.'/adminlib.php');
 
 function block_bs_recent_badges_get_issued_badges($courseid, $number) {
     global $DB;

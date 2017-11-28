@@ -46,3 +46,21 @@ ul.recent-badges-big,
 ul.recent-badges-small {
 	padding-top: 8px;
 }
+
+#page-admin-blocks-bs_recent_badges-about .about-box {
+	margin-top: 50px;
+}
+
+#page-admin-blocks-bs_recent_badges-about .about-text,
+#page-admin-blocks-bs_recent_badges-about .donation-text {
+	margin-bottom: 12px;
+}
+
+#page-admin-blocks-bs_recent_badges-about .donation-button {
+	margin-bottom: 8px;
+}
+
+.recent-badges-latestcoursebadges,
+.recent-badges-latestsystembadges {
+	margin-bottom: 4px;
+}

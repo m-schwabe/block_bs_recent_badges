@@ -39,8 +39,8 @@ class block_bs_recent_badges extends block_base {
         return true;
     }
 
-    public function has_config() {
-        return true;
+    public function has_config() {		
+		return true;
     }
 
     public function instance_allow_config() {
@@ -117,7 +117,7 @@ class block_bs_recent_badges extends block_base {
 
             $output = $this->page->get_renderer('block_bs_recent_badges');
             $this->content->text .= html_writer::tag('div', get_string('latestcoursebadges', 'block_bs_recent_badges'),
-			    array('class' => 'latestbadges'));
+			    array('class' => 'recent-badges-latestcoursebadges'));
             $this->content->text .= $output->bs_recent_badges_print_badges_list($coursebadges, $USER->id, $courseid,
                 $this->config->iconsize, $this->config->allownames);
 
@@ -129,7 +129,7 @@ class block_bs_recent_badges extends block_base {
 
             $output = $this->page->get_renderer('block_bs_recent_badges');
             $this->content->text .= html_writer::tag('div', get_string('latestsystembadges', 'block_bs_recent_badges'),
-			    array('class' => 'latestbadges'));
+			    array('class' => 'recent-badges-latestsystembadges'));
             $this->content->text .= $output->bs_recent_badges_print_badges_list($systembadges, $USER->id, SITEID,
                 $this->config->iconsize, $this->config->allownames);
 
