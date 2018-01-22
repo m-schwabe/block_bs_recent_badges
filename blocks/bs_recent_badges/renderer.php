@@ -22,6 +22,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 require_once($CFG->libdir.'/badgeslib.php');
 require_once($CFG->libdir.'/tablelib.php');
 
@@ -49,29 +51,29 @@ class block_bs_recent_badges_renderer extends plugin_renderer_base {
                     $useritem = $username;
 
                 if (has_capability('moodle/user:viewdetails', $context)
-				    and has_capability('moodle/course:viewparticipants', $context)) {
+                    and has_capability('moodle/course:viewparticipants', $context)) {
 
                         $userurl = new moodle_url('/user/view.php', array('id' => $badge->userid, 'course' => $courseid));
                         $useritem = get_string('user', 'block_bs_recent_badges').
-					        html_writer::link($userurl, $username, array('title' => $username));
+                            html_writer::link($userurl, $username, array('title' => $username));
                 }
             }
 
             if (!empty($badge->dateexpire) && $badge->dateexpire < time()) {
                 $image .= $this->output->pix_icon('i/expired',
                     get_string('expireddate', 'badges', userdate($badge->dateexpire)), 'moodle',
-					    array('class' => 'expireimage'));
+                        array('class' => 'expireimage'));
                 $name .= ' (' . get_string('expired', 'badges') . ')';
             }
 
             $badgeparams = ($courseid == SITEID) ? array('type' => 1) : array('type' => 2, 'id' => $courseid);
             $badgeurl = new moodle_url('/badges/view.php', $badgeparams);
 
-			$title = html_writer::tag('span', $name, array('class' => 'badge-title'));
-			if ($size == 'small') {
-			    $item = html_writer::tag('div', $image.' '.$title, array('class' => 'badge-item'));
+            $title = html_writer::tag('span', $name, array('class' => 'badge-title'));
+            if ($size == 'small') {
+                $item = html_writer::tag('div', $image.' '.$title, array('class' => 'badge-item'));
             } else {
-			    $item = html_writer::tag('div', $image, array('class' => 'badge-item')).
+                $item = html_writer::tag('div', $image, array('class' => 'badge-item')).
                     html_writer::tag('div', $title, array('class' => 'badge-item'));
             }
             $badgeitem = html_writer::link($badgeurl, $item, array('title' => $name));

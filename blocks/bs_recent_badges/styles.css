@@ -1,66 +1,66 @@
 .recent-badges-big li {
-	list-style-type: none;
+    list-style-type: none;
     text-align: center !important;
-	padding-bottom: 16px !important;
+    padding-bottom: 16px !important;
 }
 .recent-badges-small li {
-	list-style-type: none;
+    list-style-type: none;
     text-align: left !important;
-	padding-bottom: 16px !important;
+    padding-bottom: 16px !important;
 }
 .recent-badges-small li .badge-image {
-	width: 25px;
-	height: 25px;
-	left: 0px;
-	top: 0px;
-	z-index: 1;
+    width: 25px;
+    height: 25px;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
 }
-.recent-badges-big li .badge-image { 
-	width: 100px;
-	height: 100px;
-	left: 0px;
-	top: 0px;
-	z-index: 1;
+.recent-badges-big li .badge-image {
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
 }
 .recent-badges-small li img.expireimage {
-	width: 25px;
-	height: 25px;
-	left: 0px;
-	top: 0px;
-	z-index: 2;
-	margin-left: -25px;
+    width: 25px;
+    height: 25px;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    margin-left: -25px;
 }
 .recent-badges-big li img.expireimage {
-	width: 100px;
-	height: 100px;
-	left: 0px;
-	top: 0px;
-	z-index: 2;
-	margin-left: -100px;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    margin-left: -100px;
 }
 .recent-badges-big span.badge-name,
 .recent-badges-small span.badge-name {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 ul.recent-badges-big,
 ul.recent-badges-small {
-	padding-top: 8px;
+    padding-top: 8px;
 }
 
 #page-admin-blocks-bs_recent_badges-about .about-box {
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 #page-admin-blocks-bs_recent_badges-about .about-text,
 #page-admin-blocks-bs_recent_badges-about .donation-text {
-	margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 #page-admin-blocks-bs_recent_badges-about .donation-button {
-	margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .recent-badges-latestcoursebadges,
 .recent-badges-latestsystembadges {
-	margin-bottom: 4px;
+    margin-bottom: 4px;
 }

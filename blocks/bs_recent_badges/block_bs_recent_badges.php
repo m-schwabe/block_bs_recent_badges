@@ -39,8 +39,8 @@ class block_bs_recent_badges extends block_base {
         return true;
     }
 
-    public function has_config() {		
-		return true;
+    public function has_config() {
+        return true;
     }
 
     public function instance_allow_config() {
@@ -90,7 +90,7 @@ class block_bs_recent_badges extends block_base {
         if (!isset($this->config->iconsize)) {
             $this->config->iconsize = 'small';
         }
-		
+
         // Size of badge icons.
         if (!isset($this->config->allownames)) {
             $this->config->allownames = 0;
@@ -111,25 +111,25 @@ class block_bs_recent_badges extends block_base {
         }
 
         if (get_config('block_bs_recent_badges')->allowedmodus != 'onlysystem'
-			and $this->config->numberofcoursebadges > 0
+            and $this->config->numberofcoursebadges > 0
             and $coursebadges = block_bs_recent_badges_get_issued_badges($courseid, $this->config->numberofcoursebadges)
             and $COURSE->id != SITEID) {
 
             $output = $this->page->get_renderer('block_bs_recent_badges');
             $this->content->text .= html_writer::tag('div', get_string('latestcoursebadges', 'block_bs_recent_badges'),
-			    array('class' => 'recent-badges-latestcoursebadges'));
+                array('class' => 'recent-badges-latestcoursebadges'));
             $this->content->text .= $output->bs_recent_badges_print_badges_list($coursebadges, $USER->id, $courseid,
                 $this->config->iconsize, $this->config->allownames);
 
         }
 
         if (get_config('block_bs_recent_badges')->allowedmodus != 'onlycourse'
-			and $this->config->numberofsystembadges > 0
+            and $this->config->numberofsystembadges > 0
             and $systembadges = block_bs_recent_badges_get_issued_badges(SITEID, $this->config->numberofsystembadges)) {
 
             $output = $this->page->get_renderer('block_bs_recent_badges');
             $this->content->text .= html_writer::tag('div', get_string('latestsystembadges', 'block_bs_recent_badges'),
-			    array('class' => 'recent-badges-latestsystembadges'));
+                array('class' => 'recent-badges-latestsystembadges'));
             $this->content->text .= $output->bs_recent_badges_print_badges_list($systembadges, $USER->id, SITEID,
                 $this->config->iconsize, $this->config->allownames);
 
