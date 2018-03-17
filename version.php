@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2018012200;               // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2015050500;               // Requires this Moodle version (2.9).
+$plugin->version   = 2018031700;               // The current plugin version (Date: YYYYMMDDXX).
+$plugin->requires  = 2015111600;               // Requires this Moodle version (3.0).
 $plugin->component = 'block_bs_recent_badges'; // Full name of the plugin (used for diagnostics).
-$plugin->release   = '1.2 (2018012200)';
+$plugin->release   = '1.2 (2018031700)';
 $plugin->maturity  = MATURITY_STABLE;
