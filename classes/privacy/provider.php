@@ -15,17 +15,29 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details.
+ * Privacy Subsystem implementation for recent badges plugin.
  *
  * @package    block_bs_recent_badges
  * @copyright  2015 onwards Matthias Schwabe {@link http://matthiasschwa.be}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+namespace block_bs_recent_badges\privacy;
+
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2018072701;               // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2018051700;               // Requires this Moodle version (3.5).
-$plugin->component = 'block_bs_recent_badges'; // Full name of the plugin (used for diagnostics).
-$plugin->release   = '1.3 (2018072701)';
-$plugin->maturity  = MATURITY_STABLE;
+/**
+ * Privacy Subsystem for block_bs_recent_badges implementing null_provider.
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
